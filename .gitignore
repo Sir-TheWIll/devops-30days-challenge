@@ -1,8 +1,5 @@
-# Ignore Terraform state files
-*.tfstate
-*.tfstate.lock
-*.tfplan
-
-# Ignore terraform directory
 .terraform/
-./ss 
+.terraform.lock.hcl
+*.tfstate
+*.tfstate.*
+.DS_Store
