@@ -1,27 +1,34 @@
-# 🚀 Day 1: Infrastructure as Code (IaC) with Terraform
+# 🚀 30-Day DevOps Challenge: Days 1-2
 
-> **Part of the 30-Day DevOps Mastery Challenge**  
-> 📅 **Date:** February 2026  
+> **Building Production-Grade Cloud Infrastructure**  
+> 📅 **Progress:** Day 2/30 Complete  
 > ☁️ **Cloud Provider:** AWS (Free Tier)  
-> 🛠️ **Tools:** Terraform, AWS CLI, Git
+> 🛠️ **Tools:** Terraform, AWS CLI, AWS Secrets Manager, Git
 
 ## 🎯 Project Overview
-This project demonstrates the foundational principles of **Infrastructure as Code (IaC)** using Terraform. The goal was to provision a secure, versioned AWS S3 bucket programmatically instead of manually clicking through the AWS Console.
+This repository documents my journey through a **30-Day DevOps Mastery Challenge**. The goal is to build, secure, and automate cloud infrastructure using industry-standard tools.
 
-This setup ensures infrastructure is **repeatable, version-controlled, and auditable**—key practices for modern DevOps engineering.
+**Current Focus:**
+- **Day 1:** Infrastructure as Code (IaC) with Terraform
+- **Day 2:** Secure Secrets Management with AWS Secrets Manager
+
+This project demonstrates how to provision resources programmatically while adhering to security best practices (no hardcoded secrets!).
 
 ## 🏗️ Architecture
-- **Resource:** AWS S3 Bucket
-- **Feature:** Bucket Versioning Enabled
-- **Tagging Strategy:** Implemented for cost allocation and ownership tracking
-- **State Management:** Local state (with `.gitignore` protection)
+| Day | Component | Technology | Status |
+|-----|-----------|------------|--------|
+| 1 | Storage | AWS S3 Bucket | ✅ Complete |
+| 1 | Versioning | S3 Versioning | ✅ Complete |
+| 2 | Security | AWS Secrets Manager | ✅ Complete |
+| 2 | Access Control | IAM Least Privilege | ✅ Complete |
 
 ## 📂 Project Structure
 ```bash
 day1-terraform-iac/
-├── .gitignore          # Excludes *.tfstate and .terraform/
-├── main.tf             # Resource definitions (S3 Bucket + Versioning)
+├── .gitignore          # Excludes *.tfstate, .terraform/, secrets
+├── main.tf             # Resource definitions (S3 Bucket)
 ├── variables.tf        # Input variables (Region, Bucket Name)
-├── outputs.tf          # Output values (Bucket ARN, Name)
+├── outputs.tf          # Output values (Bucket ARN, Metadata)
+├── secrets.tf          # [Day 2] Secret retrieval configuration
 ├── README.md           # This file
-└── terraform.tfvars    # (Optional) Variable values
+└── screenshots/        # Proof of work images
