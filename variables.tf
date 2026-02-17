@@ -7,6 +7,6 @@ variable "aws_region" {
 variable "bucket_name" {
   description = "Unique S3 bucket name (must be globally unique)"
   type        = string
-  default     = "sir-thewill-day1-20260216" 
+  default     = "sir-thewill-day1-20260216"
   # Tip: Use format: yourname-devops-day1-YYYYMMDD
 }
