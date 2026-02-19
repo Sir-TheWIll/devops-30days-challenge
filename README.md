@@ -58,15 +58,16 @@ This project demonstrates how to provision resources programmatically while adhe
 
 ---
 
+
 ## 🏗️ Architecture Overview
 
 ```mermaid
 graph TD
-    A[Terraform CLI] -->|Applies| B(AWS Cloud)
-    B --> C[S3 Bucket (Versioned)]
+    A[Terraform CLI] --> B[AWS Cloud]
+    B --> C[S3 Bucket Versioned]
     B --> D[Secrets Manager]
-    B --> E[EC2 Instance (Web Server)]
-    E -->|Sends Metrics| F[CloudWatch Alarms]
-    F -->|Triggers| G[SNS Topic]
-    F -->|Triggers| H[Auto Scaling Group]
-    H -->|Replaces| E
+    B --> E[EC2 Web Server]
+    E --> F[CloudWatch Alarms]
+    F --> G[SNS Topic]
+    F --> H[Auto Scaling Group]
+    H --> E
